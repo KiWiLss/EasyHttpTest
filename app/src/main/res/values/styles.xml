@@ -23,4 +23,13 @@
         <!--<attr name="shimmer_demo_angle" format="integer|reference"/>-->
         <!--<attr name="shimmer_demo_view_holder_item_background" format="color|reference"/>-->
     <!--</declare-styleable>-->
+
+    <style name="dialog_custom" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>    <!--是否浮在界面上-->
+        <item name="android:windowIsTranslucent">true</item> <!--是否半透明-->
+        <item name="android:windowNoTitle">false</item>       <!--是否有标题-->
+        <item name="android:windowBackground">@android:color/transparent</item> <!--窗口背景色透明-->
+        <item name="android:backgroundDimEnabled">false</item> <!--背景是否模糊显示-->
+        <!--<item name="android:windowAnimationStyle">@style/bottom_menu_animation</item> 重要，Dialog进出的显示动画-->
+    </style>
 </resources>

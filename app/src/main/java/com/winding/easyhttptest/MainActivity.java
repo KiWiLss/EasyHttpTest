@@ -2,16 +2,11 @@ package com.winding.easyhttptest;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.kingja.loadsir.callback.Callback;
 import com.kingja.loadsir.core.LoadService;
-import com.kingja.loadsir.core.LoadSir;
-import com.winding.easyhttptest.callback.EmptyCallback;
-import com.winding.easyhttptest.callback.LoadingCallback;
-import com.winding.easyhttptest.ui.TestRecyclerActivity;
+import com.winding.easyhttptest.ui.DialogActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,24 +24,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        mLoadService = LoadSir.getDefault().register(this, new Callback.OnReloadListener() {
-            @Override
-            public void onReload(View v) {
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mLoadService.showCallback(LoadingCallback.class);
-                        SystemClock.sleep(5000);
-                        mLoadService.showSuccess();
-                    }
-                }).start();
-            }
-        });
-
-        PostUtil.postCallbackDelayed(mLoadService, EmptyCallback.class);
+//        mLoadService = LoadSir.getDefault().register(this, new Callback.OnReloadListener() {
+//            @Override
+//            public void onReload(View v) {
+//                new Thread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mLoadService.showCallback(LoadingCallback.class);
+//                        SystemClock.sleep(5000);
+//                        mLoadService.showSuccess();
+//                    }
+//                }).start();
+//            }
+//        });
+//
+//        PostUtil.postCallbackDelayed(mLoadService, EmptyCallback.class);
     }
 
     public void toTestListener(View view) {
-        startActivity(new Intent(this, TestRecyclerActivity.class));
+        startActivity(new Intent(this, DialogActivity.class));
     }
 }
