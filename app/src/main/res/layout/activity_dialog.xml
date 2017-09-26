@@ -16,16 +16,17 @@
             android:onClick="showProgressDialog"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/button"
+            android:layout_width="262dp"
             android:layout_height="wrap_content"
+            android:onClick="dimissProgressDialog"
             android:text="隐藏progressdialog"
-            android:textAllCaps="false"
-            android:onClick="dimissProgressDialog"/>
+            android:textAllCaps="false" />
 
         <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@android:style/Widget.ProgressBar.Small.Inverse"/>
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content" />
 
 
 

@@ -15,12 +15,17 @@ import com.winding.easyhttptest.manage.DialogManage;
  */
 
 public class DialogActivity extends AppCompatActivity {
+    private static final int cangliang = 850;
+    private static final String KEY_ = "";
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog);
         //DialogManage.getInstance().show(this,"玩命加载中....");
         DialogManage.getInstance().showLoading(this);
+
 
 
 

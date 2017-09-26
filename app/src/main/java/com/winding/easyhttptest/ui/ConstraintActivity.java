@@ -68,8 +68,23 @@ public class ConstraintActivity extends AppCompatActivity {
           6, app:layout_constraintHorizontal_bias="0.901"
         app:layout_constraintVertical_bias="0.902"
         设置上下两侧间隙比例分别为90%和10%,控制两侧的拉力
+        7,辅助线,在布局中不会显示,起辅助作用,帮助对齐
+          <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.73"/>
          */
 
 
+
+
     }
+
 }
