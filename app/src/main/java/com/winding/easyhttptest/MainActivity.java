@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.kingja.loadsir.core.LoadService;
-import com.winding.easyhttptest.ui.DialogActivity;
+import com.winding.easyhttptest.ui.ConstraintActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +42,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toTestListener(View view) {
-        startActivity(new Intent(this, DialogActivity.class));
+        startActivity(new Intent(this, ConstraintActivity.class));
     }
 }
