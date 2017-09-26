@@ -3,8 +3,10 @@ package com.winding.easyhttptest.ui;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.winding.easyhttptest.R;
+import com.winding.easyhttptest.model.TestModel;
 
 /**
  * Created by 刘少帅 on 2017/9/26
@@ -16,6 +18,9 @@ public class ConstraintActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constraint);
 
+
+        TestModel model = getIntent().getParcelableExtra("object");
+        Log.e("MMM", "onCreate: "+model.toString());
         /*
         1,app:layout_constraintLeft_toLeftOf="parent"
                 让该控件的左侧与父布局对齐
