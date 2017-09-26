@@ -30,4 +30,7 @@ dependencies {
 
     //compile 'com.zhouyou:rxeasyhttp:2.0.2'
     compile 'com.kingja.loadsir:loadsir:1.2.0'
+    compile 'com.github.sharish:ShimmerRecyclerView:v1.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+
 }

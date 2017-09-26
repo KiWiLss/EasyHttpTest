@@ -1,5 +1,6 @@
 package com.winding.easyhttptest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +9,9 @@ import android.view.View;
 import com.kingja.loadsir.callback.Callback;
 import com.kingja.loadsir.core.LoadService;
 import com.kingja.loadsir.core.LoadSir;
+import com.winding.easyhttptest.callback.EmptyCallback;
 import com.winding.easyhttptest.callback.LoadingCallback;
+import com.winding.easyhttptest.ui.TestRecyclerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        PostUtil.postCallbackDelayed(mLoadService, EmptyCallback.class);
+    }
 
+    public void toTestListener(View view) {
+        startActivity(new Intent(this, TestRecyclerActivity.class));
     }
 }
