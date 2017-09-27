@@ -8,6 +8,7 @@ import android.view.View;
 import com.kingja.loadsir.core.LoadService;
 import com.winding.easyhttptest.model.TestModel;
 import com.winding.easyhttptest.ui.ConstraintActivity;
+import com.winding.easyhttptest.ui.MailListActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,13 +41,21 @@ public class MainActivity extends AppCompatActivity {
 //        });
 //
 //        PostUtil.postCallbackDelayed(mLoadService, EmptyCallback.class);
+
+
+
     }
 
     public void toTestListener(View view) {
+
         TestModel testModel = new TestModel("name",90,"hello");
         Intent intent = new Intent(this, ConstraintActivity.class);
         intent.putExtra("object",testModel);
-
         startActivity(intent);
+
+    }
+
+    public void toFindMailList(View view) {
+        startActivity(new Intent(this, MailListActivity.class));
     }
 }
