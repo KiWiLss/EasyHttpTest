@@ -27,6 +27,11 @@
             android:text="查询通讯录"
             android:onClick="toFindMailList"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音量控制"
+            android:onClick="soundListener"/>
     </LinearLayout>
 
 

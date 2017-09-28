@@ -31,6 +31,8 @@
         <activity android:name=".ui.DialogActivity"/>
         <activity android:name=".ui.ConstraintActivity"/>
         <activity android:name=".ui.MailListActivity"/>
+        <activity android:name=".ui.SoundActivity"/>
+        <service android:name=".service.StartService"/>
 
     </application>
 

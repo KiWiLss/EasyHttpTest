@@ -9,6 +9,7 @@ import com.kingja.loadsir.core.LoadService;
 import com.winding.easyhttptest.model.TestModel;
 import com.winding.easyhttptest.ui.ConstraintActivity;
 import com.winding.easyhttptest.ui.MailListActivity;
+import com.winding.easyhttptest.ui.SoundActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,5 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void toFindMailList(View view) {
         startActivity(new Intent(this, MailListActivity.class));
+    }
+
+    public void soundListener(View view) {
+        startActivity(new Intent(this, SoundActivity.class));
     }
 }
