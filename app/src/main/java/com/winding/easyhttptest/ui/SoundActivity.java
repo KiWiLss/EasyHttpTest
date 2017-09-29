@@ -11,6 +11,7 @@ import android.widget.SeekBar;
 
 import com.winding.easyhttptest.R;
 import com.winding.easyhttptest.service.StartService;
+import com.winding.easyhttptest.utils.SoundUtils;
 
 /**
  * Created by 刘少帅 on 2017/9/28
@@ -31,6 +32,10 @@ public class SoundActivity extends AppCompatActivity {
     }
 
     private void sbListener() {
+
+
+        AudioManager mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+
         //实例化
         final AudioManager mgr = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -43,6 +48,7 @@ public class SoundActivity extends AppCompatActivity {
 //                        AudioManager.ADJUST_LOWER,
 //                        AudioManager.FLAG_SHOW_UI);//调低声音
 
+                //设置音量的高低
                 mgr.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
 
             }
@@ -71,5 +77,15 @@ public class SoundActivity extends AppCompatActivity {
 
     public void closeSound(View view) {
         stopService(new Intent(SoundActivity.this,StartService.class));
+    }
+
+    public void getAllSound(View view) {
+
+       SoundUtils.getPhone(this);
+       SoundUtils.getSystem(this);
+       SoundUtils.getMedia(this);
+       SoundUtils.getLingSeng(this);
+       SoundUtils.getHint(this);
+
     }
 }
