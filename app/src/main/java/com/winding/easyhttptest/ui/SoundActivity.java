@@ -12,6 +12,7 @@ import android.widget.SeekBar;
 import com.winding.easyhttptest.R;
 import com.winding.easyhttptest.service.StartService;
 import com.winding.easyhttptest.utils.SoundUtils;
+import com.winding.easyhttptest.utils.Utils;
 
 /**
  * Created by 刘少帅 on 2017/9/28
@@ -88,31 +89,11 @@ public class SoundActivity extends AppCompatActivity {
        SoundUtils.getHint(this);
 
     }
-
-  /*  private void endCall() {
-        try {
-            *//*
-             * 1.得到字节码文件
-             * 2.得到对应的方法getService
-             * 4.执行这个方法
-             * 以上是反射过程
-             * 5。拷贝aidl文件
-             * 6.生成java代码
-             * 7，执行endCall（）；
-             *//*
-            Class clazz = BlackNumberService.class.getClassLoader()
-                    .loadClass("android.os.ServiceManager");
-            Method method = clazz.getDeclaredMethod("getService",
-                    String.class);
-            IBinder iBinder = (IBinder) method.invoke(null,
-                    TELEPHONY_SERVICE);
-            ITelephony.Stub.asInterface(iBinder).endCall();
-
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }*/
+    boolean isOpen=false;
+    public void openOrClose(View view) {
+        Utils.muteAudioFocus(this,isOpen);
+        isOpen=!isOpen;
+    }
 
 
 }
