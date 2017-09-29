@@ -34,6 +34,8 @@
         <activity android:name=".ui.SoundActivity"/>
         <service android:name=".service.StartService"/>
 
+        <activity android:name=".ui.MobileActivity"/>
+
     </application>
 
 </manifest>
